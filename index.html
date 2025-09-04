@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>The Recipe Book</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <h1 class="nav-title">The Recipe Book</h1>
+        <div class="nav-links">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#explore" class="nav-link">Explore</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="home">
+        <div class="hero">
+          <div class="decorative-images">
+            <img
+              src="assets/deco.svg"
+              alt="Recipe decoration"
+              class="bg-deco1"
+            />
+          </div>
+          <div class="hero-content">
+            <h1>The Recipe Book</h1>
+            <p class="tagline">Discover and Share Amazing Recipes</p>
+            <p class="description">
+              Find your next favorite dish or share your culinary creations with
+              the world.
+            </p>
+            <button class="cta-button" onclick="scrollToExplore()">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="explore" class="explore-recipes">
+        <div class="container">
+          <h2>Explore Recipes</h2>
+          <p class="section-description">
+            Browse through a variety of recipes from different cuisines and
+            dietary preferences.
+          </p>
+
+          <div class="search-panel">
+            <div class="search-bar">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for recipes..."
+              />
+              <button onclick="searchRecipes()">Search</button>
+            </div>
+
+            <div class="filters">
+              <div class="filter-group">
+                <label for="cuisine">Cuisine:</label>
+                <select id="cuisine" onchange="filterRecipes()">
+                  <option value="all">All</option>
+                  <option value="italian">Italian</option>
+                  <option value="mexican">Mexican</option>
+                  <option value="chinese">Chinese</option>
+                  <option value="indian">Indian</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="diet">Diet:</label>
+                <select id="diet" onchange="filterRecipes()">
+                  <option value="all">All</option>
+                  <option value="vegetarian">Vegetarian</option>
+                  <option value="vegan">Vegan</option>
+                  <option value="gluten-free">Gluten-Free</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="prep-time">Time:</label>
+                <select id="prep-time" onchange="filterRecipes()">
+                  <option value="all">All</option>
+                  <option value="under-30">Under 30 min</option>
+                  <option value="30-60">30-60 min</option>
+                  <option value="over-60">Over 60 min</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="recipes-grid" id="recipesGrid">
+            <!-- Recipes will be populated by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>made with ♥ by Sujal Patel</p>
+        <p class="footer-year">© 2025 The Recipe Book</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
