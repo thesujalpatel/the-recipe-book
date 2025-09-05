@@ -9,7 +9,9 @@
   <body>
     <nav class="navbar">
       <div class="nav-container">
-        <h1 class="nav-title">The Recipe Book</h1>
+        <a href="#home">
+          <h1 class="nav-title" id="navTitle">The Recipe Book</h1>
+        </a>
         <div class="nav-links">
           <a href="#home" class="nav-link active">Home</a>
           <a href="#explore" class="nav-link">Explore</a>
@@ -80,17 +82,6 @@
             </div>
 
             <div class="filters">
-              <div class="filter-group">
-                <label for="cuisine">Cuisine:</label>
-                <select id="cuisine" onchange="filterRecipes()">
-                  <option value="all">All</option>
-                  <option value="italian">Italian</option>
-                  <option value="mexican">Mexican</option>
-                  <option value="chinese">Chinese</option>
-                  <option value="indian">Indian</option>
-                </select>
-              </div>
-
               <div class="filter-group">
                 <label for="diet">Diet:</label>
                 <select id="diet" onchange="filterRecipes()">
