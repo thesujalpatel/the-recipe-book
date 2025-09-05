@@ -1,125 +1,138 @@
 // Sample recipe data
-const recipes = [
+const recipes = 
+   [
   {
     id: 1,
-    name: "Spaghetti Carbonara",
-    cuisine: "italian",
+    name: "Paneer Butter Masala",
+    cuisine: "indian",
     diet: "vegetarian",
-    prepTime: "under-30",
-    description: "Classic Italian pasta dish with eggs, cheese, and pancetta.",
-    ingredients: "Spaghetti, eggs, parmesan cheese, pancetta, black pepper",
-    image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop"
-  },
-  {
-    id: 2,
-    name: "Chicken Tacos",
-    cuisine: "mexican",
-    diet: "all",
-    prepTime: "under-30",
-    description: "Delicious chicken tacos with fresh vegetables and spices.",
-    ingredients: "Chicken breast, tortillas, lettuce, tomatoes, onions, lime",
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=300&fit=crop"
+    prepTime: "under-45",
+    description: "Rich and creamy curry made with paneer, butter, and tomato gravy.",
+    ingredients: "Paneer, butter, tomatoes, cream, onions, garlic, ginger, garam masala",
+    image: "https://sandhyahariharan.co.uk/wp-content/uploads/2022/07/paneer-butter-masala-2.jpg"
   },
   {
     id: 3,
-    name: "Vegetable Fried Rice",
-    cuisine: "chinese",
+    name: "Masala Dosa",
+    cuisine: "indian",
     diet: "vegetarian",
-    prepTime: "under-30",
-    description: "Quick and easy fried rice with mixed vegetables.",
-    ingredients: "Rice, mixed vegetables, soy sauce, garlic, ginger, eggs",
-    image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop"
+    prepTime: "under-60",
+    description: "Crispy rice crepe stuffed with spiced potato filling, served with chutney and sambar.",
+    ingredients: "Rice, urad dal, potatoes, curry leaves, green chilies, mustard seeds",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1gPSMIK3sUiRUDNve5tgZh2FrCEAgpxb-tw&s"
   },
   {
     id: 4,
-    name: "Butter Chicken",
+    name: "Chole Bhature",
     cuisine: "indian",
-    diet: "all",
-    prepTime: "30-60",
-    description: "Creamy and flavorful Indian curry with tender chicken.",
-    ingredients: "Chicken, tomatoes, cream, butter, spices, onions",
-    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=400&h=300&fit=crop"
-  },
-  {
-    id: 5,
-    name: "Margherita Pizza",
-    cuisine: "italian",
     diet: "vegetarian",
-    prepTime: "30-60",
-    description: "Classic pizza with fresh tomatoes, mozzarella, and basil.",
-    ingredients: "Pizza dough, tomato sauce, mozzarella, fresh basil, olive oil",
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop"
+    prepTime: "under-60",
+    description: "Fried fluffy bread served with spicy chickpea curry.",
+    ingredients: "Chickpeas, flour, onions, tomatoes, ginger, garlic, garam masala",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8qZYqLr9OgwtfLJkC1ETQUn4oS__y5tjYBQ&s"
   },
   {
     id: 6,
-    name: "Quinoa Salad",
-    cuisine: "all",
-    diet: "vegan",
-    prepTime: "under-30",
-    description: "Healthy and nutritious quinoa salad with fresh vegetables.",
-    ingredients: "Quinoa, cucumber, tomatoes, red onion, olive oil, lemon",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop"
-  },
-  {
-    id: 7,
-    name: "Beef Stir Fry",
-    cuisine: "chinese",
-    diet: "all",
-    prepTime: "under-30",
-    description: "Quick beef stir fry with vegetables and savory sauce.",
-    ingredients: "Beef strips, bell peppers, broccoli, soy sauce, garlic",
-    image: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400&h=300&fit=crop"
+    name: "Idli Sambar",
+    cuisine: "indian",
+    diet: "vegetarian",
+    prepTime: "under-45",
+    description: "Steamed rice cakes served with spicy lentil stew and coconut chutney.",
+    ingredients: "Rice, urad dal, toor dal, tamarind, curry leaves, coconut",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGR_wP79RQXv1rShNTWgPHDtxnqnRfboBLdQ&s"
   },
   {
     id: 8,
-    name: "Vegetable Curry",
+    name: "Aloo Paratha",
     cuisine: "indian",
-    diet: "vegan",
-    prepTime: "30-60",
-    description: "Aromatic vegetable curry with coconut milk and spices.",
-    ingredients: "Mixed vegetables, coconut milk, curry spices, onions, garlic",
-    image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop"
-  },
-  {
-    id: 9,
-    name: "Fish Tacos",
-    cuisine: "mexican",
-    diet: "all",
-    prepTime: "under-30",
-    description: "Light and fresh fish tacos with cabbage slaw.",
-    ingredients: "White fish, corn tortillas, cabbage, lime, cilantro, avocado",
-    image: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&h=300&fit=crop"
+    diet: "vegetarian",
+    prepTime: "under-45",
+    description: "Stuffed whole wheat bread with spiced potato filling, served with butter or yogurt.",
+    ingredients: "Wheat flour, potatoes, green chilies, onions, butter",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxueufrBj0wynq0knzDYAqTIfVMo7-uk-icg&s"
   },
   {
     id: 10,
-    name: "Mushroom Risotto",
-    cuisine: "italian",
+    name: "Pav Bhaji",
+    cuisine: "indian",
     diet: "vegetarian",
-    prepTime: "30-60",
-    description: "Creamy risotto with mushrooms and parmesan cheese.",
-    ingredients: "Arborio rice, mushrooms, vegetable broth, parmesan, white wine",
-    image: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=400&h=300&fit=crop"
+    prepTime: "under-45",
+    description: "Spiced mashed vegetable curry served with buttered bread rolls.",
+    ingredients: "Potatoes, tomatoes, peas, capsicum, butter, pav bread",
+    image: "https://bhojmasale.com/cdn/shop/articles/delicious-pav-bhaji-recipe-a-step-by-step-guide-930907_1024x1024.webp?v=1739152900"
   },
   {
     id: 11,
-    name: "Gluten-Free Pasta",
-    cuisine: "italian",
-    diet: "gluten-free",
+    name: "Dal Tadka",
+    cuisine: "indian",
+    diet: "vegetarian",
     prepTime: "under-30",
-    description: "Delicious gluten-free pasta with garlic and herbs.",
-    ingredients: "Gluten-free pasta, garlic, olive oil, herbs, parmesan",
-    image: "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=400&h=300&fit=crop"
+    description: "Yellow lentils cooked and tempered with ghee, garlic, and red chilies.",
+    ingredients: "Toor dal, ghee, garlic, cumin, onions, tomatoes",
+    image: "https://i0.wp.com/www.dhabastyle.com/wp-content/uploads/2017/04/maxresdefault-1.jpg?fit=1100%2C619&ssl=1"
   },
   {
-    id: 12,
-    name: "Buddha Bowl",
-    cuisine: "all",
-    diet: "vegan",
-    prepTime: "30-60",
-    description: "Nutritious bowl with quinoa, vegetables, and tahini dressing.",
-    ingredients: "Quinoa, sweet potato, chickpeas, avocado, tahini, greens",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop"
+    id: 13,
+    name: "Pani Puri",
+    cuisine: "indian",
+    diet: "vegetarian",
+    prepTime: "under-30",
+    description: "Crispy puris filled with spicy tangy water and potato stuffing.",
+    ingredients: "Sooji, potatoes, tamarind, mint, green chilies, chickpeas",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTorqQfvieS0ikzzKGuxNL9kkj52CTGVtA0CA&s"
+  },
+  {
+    id: 15,
+    name: "Vegetable Pulao",
+    cuisine: "indian",
+    diet: "vegetarian",
+    prepTime: "under-45",
+    description: "Fragrant rice dish cooked with vegetables and spices.",
+    ingredients: "Basmati rice, carrots, beans, peas, onions, bay leaves, cloves",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXh8JwS9wEk8r2un31eZJtUqoEIveNLTHibg&s"
+  },
+  {
+    id: 17,
+    name: "Dhokla",
+    cuisine: "indian",
+    diet: "vegetarian",
+    prepTime: "under-30",
+    description: "Steamed savory cake made with gram flour, popular in Gujarat.",
+    ingredients: "Gram flour, yogurt, lemon juice, green chili, mustard seeds, curry leaves",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/65/Dhokla_on_Gujrart.jpg"
+  },
+  {
+    id: 18,
+    name: "Palak Paneer",
+    cuisine: "indian",
+    diet: "vegetarian",
+    prepTime: "under-45",
+    description: "Paneer cubes cooked in a smooth spinach gravy.",
+    ingredients: "Paneer, spinach, onions, garlic, ginger, green chilies",
+    image: "https://www.chefajaychopra.com/assets/img/recipe/1-1666433552palakpaneer1webp.webp"
+  },
+  {
+    id: 19,
+    name: "Vada Pav",
+    cuisine: "indian",
+    diet: "vegetarian",
+    prepTime: "under-30",
+    description: "Mumbai’s famous street food made with spicy potato fritter in bread bun.",
+    ingredients: "Potatoes, gram flour, pav bread, garlic chutney, green chilies",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo4Bg-PSNOU142m2TooCDwaXqYrCJsV5vHnQ&s"
+  },
+  {
+    id: 20,
+    name: "Goan Prawn Curry",
+    cuisine: "indian",
+    diet: "non-vegetarian",
+    prepTime: "under-45",
+    description: "Spicy and tangy curry made with prawns and coconut milk.",
+    ingredients: "Prawns, coconut milk, tamarind, curry leaves, green chilies",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI9aNawBQ5AuNbJA689MGVPfw60uH6gJ9afw&s"
   }
+
+
 ];
 
 let filteredRecipes = [...recipes];
