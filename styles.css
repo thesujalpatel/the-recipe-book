@@ -110,6 +110,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+  pointer-events: none;
 }
 .bg-deco1 {
   width: 800px;
