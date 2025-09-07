@@ -104,9 +104,7 @@
             </div>
           </div>
 
-          <div class="recipes-grid" id="recipesGrid">
-            <!-- Recipes will be populated by JavaScript -->
-          </div>
+          <div class="recipes-grid" id="recipesGrid"></div>
         </div>
       </section>
     </main>
@@ -117,6 +115,17 @@
         <p class="footer-year">© 2025 The Recipe Book</p>
       </div>
     </footer>
+
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImg" src="" alt="Dish Image" />
+        <p id="modalDescription"></p>
+        <h3>Cooking Steps</h3>
+        <ol id="modalSteps"></ol>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
