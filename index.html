@@ -4,18 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>The Recipe Book</title>
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="nav-section">
         <div class="nav-container">
-          <a href="#home">
-            <h1 class="nav-title" id="navTitle">The Recipe Book</h1>
-          </a>
-          <div class="nav-links">
-            <a href="#home" class="nav-link active">Home</a>
-            <a href="#explore" class="nav-link">Explore</a>
+          <div class="nav-wrapper">
+            <a href="#home">
+              <h1 class="nav-title" id="navTitle">The Recipe Book</h1>
+            </a>
+            <div class="nav-links">
+              <a href="#home" class="nav-link active">Home</a>
+              <a href="#explore" class="nav-link">Explore</a>
+            </div>
           </div>
         </div>
       </nav>
@@ -24,33 +35,44 @@
     <main>
       <section id="home" class="home">
         <div class="container">
-          <div class="wrapper hero">
+          <div class="hero-wrapper">
             <div class="decorative-images">
-              <img
-                src="assets/images/HeroBackground.svg"
-                alt="Recipe decoration"
-                class="bg-deco1"
-              />
-              <img
-                src="assets/images/HeroDecoration1.png"
-                alt="Recipe decoration"
-                class="bg-deco2"
-              />
-              <img
-                src="assets/images/HeroDecoration2.png"
-                alt="Recipe decoration"
-                class="bg-deco3"
-              />
-              <img
-                src="assets/images/HeroDecoration3.png"
-                alt="Recipe decoration"
-                class="bg-deco4"
-              />
-              <img
-                src="assets/images/HeroDecoration4.png"
-                alt="Recipe decoration"
-                class="bg-deco5"
-              />
+              <div class="img-wrapper">
+                <img
+                  src="assets/images/HeroBackground.svg"
+                  alt="Recipe decoration"
+                  class="bg-decoration"
+                />
+              </div>
+              <div class="img-wrapper">
+                <img
+                  src="assets/images/HeroDecoration1.png"
+                  alt="Recipe decoration"
+                  class="bg-decoration-element1"
+                />
+              </div>
+
+              <div class="img-wrapper">
+                <img
+                  src="assets/images/HeroDecoration2.png"
+                  alt="Recipe decoration"
+                  class="bg-decoration-element2"
+                />
+              </div>
+              <div class="img-wrapper">
+                <img
+                  src="assets/images/HeroDecoration3.png"
+                  alt="Recipe decoration"
+                  class="bg-decoration-element3"
+                />
+              </div>
+              <div class="img-wrapper">
+                <img
+                  src="assets/images/HeroDecoration4.png"
+                  alt="Recipe decoration"
+                  class="bg-decoration-element4"
+                />
+              </div>
             </div>
             <div class="hero-content">
               <h1>The Recipe Book</h1>
@@ -69,7 +91,7 @@
 
       <section id="explore" class="explore-recipes">
         <div class="container">
-          <div class="wrapper">
+          <div class="explore-wrapper">
             <h2>Explore Recipes</h2>
             <p class="section-description">
               Browse through a variety of recipes from different cuisines and
@@ -117,11 +139,9 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="wrapper">
-          <div class="footer-content">
-            <p>made with ♥ by Sujal Patel</p>
-            <p class="footer-year">© 2025 The Recipe Book</p>
-          </div>
+        <div class="footer-wrapper">
+          <p>made with ♥ by Sujal Patel</p>
+          <p class="footer-year">© 2025 The Recipe Book</p>
         </div>
       </div>
     </footer>
@@ -131,7 +151,9 @@
       <div class="modal-content">
         <span id="closeModal">&times;</span>
         <h2 id="modalTitle"></h2>
-        <img id="modalImg" src="" alt="Dish Image" />
+        <div class="img-wrapper">
+          <img id="modalImg" src="" alt="Dish Image" />
+        </div>
         <p id="modalDescription"></p>
         <h3 id="modalStepsTitle">Cooking Steps</h3>
         <ol id="modalSteps"></ol>

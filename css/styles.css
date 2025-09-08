@@ -10,19 +10,23 @@
   --color-background-tint: rgba(0, 0, 0, 0.5);
 
   /* Font Family */
-  --font-custome: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-sour-gummy: "Sour Gummy", sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-sour-gummy);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-secondary);
-  font-family: var(--font-custome);
+
   line-height: 1.6;
 }
 a {
@@ -72,7 +76,7 @@ button:hover {
 }
 
 /* Navigation bar */
-.navbar {
+.nav-section {
   position: fixed;
   top: 0;
   width: 100%;
@@ -81,7 +85,7 @@ button:hover {
   z-index: 5;
 }
 
-.nav-container {
+.nav-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -123,7 +127,7 @@ button:hover {
   overflow: hidden;
 }
 
-.hero {
+.hero-wrapper {
   position: relative;
   text-align: center;
   z-index: 2;
@@ -138,7 +142,7 @@ button:hover {
   padding: 2rem;
 }
 
-.hero h1 {
+.hero-wrapper h1 {
   font-size: 3.5rem;
   color: var(--color-primary);
 }
@@ -157,7 +161,7 @@ button:hover {
   opacity: 0.8;
 }
 .cta-button {
-  padding: 15px 30px;
+  padding: 10px 15px;
   font-size: 18px;
   border-radius: 10px;
 }
@@ -171,31 +175,31 @@ button:hover {
   z-index: -1;
   pointer-events: none;
 }
-.bg-deco1 {
+.bg-decoration {
   width: 800px;
   height: auto;
 }
-.bg-deco2 {
+.bg-decoration-element1 {
   position: absolute;
   inset: 0;
   width: 250px;
   left: -5%;
   top: -30%;
 }
-.bg-deco3 {
+.bg-decoration-element2 {
   position: absolute;
   width: 200px;
   right: 0%;
   top: -20%;
 }
-.bg-deco4 {
+.bg-decoration-element3 {
   position: absolute;
   width: 400px;
   right: -10%;
   bottom: -30%;
   transform: rotate(90deg);
 }
-.bg-deco5 {
+.bg-decoration-element4 {
   position: absolute;
   width: 200px;
   left: 5%;
@@ -204,7 +208,7 @@ button:hover {
 
 /* Explore Section */
 .explore-recipes {
-  min-height: 100vh;
+  min-height: 100%;
   padding: 6rem 0 4rem;
   background-color: var(--color-background);
 }
@@ -280,6 +284,7 @@ button:hover {
   background-color: var(--color-accent);
   border-radius: 15px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .recipe-image-container {
@@ -308,7 +313,7 @@ button:hover {
 .recipe-card h3 {
   color: var(--color-primary);
   margin-bottom: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 }
 
 .recipe-meta {
@@ -323,17 +328,18 @@ button:hover {
   background-color: var(--color-background);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .recipe-description {
+  font-size: 1.1rem;
+  font-weight: 500;
   color: var(--color-secondary);
   margin-bottom: 1rem;
 }
 
 .recipe-ingredients {
-  font-size: 0.9rem;
-  color: var(--color-secondary);
+  opacity: 0.7;
 }
 
 .footer {
@@ -343,7 +349,7 @@ button:hover {
   padding: 2rem 0;
 }
 
-.footer-content {
+.footer-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -361,7 +367,7 @@ button:hover {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: var(--color-background-tint);
   justify-content: center;
   align-items: center;
@@ -392,19 +398,25 @@ button:hover {
   border-radius: 8px;
   margin-bottom: 1rem;
 }
+#modalDescription {
+  opacity: 0.9;
+}
 #modalStepsTitle {
+  color: var(--color-primary);
+  font-size: 25px;
   margin-top: 5px;
 }
 #modalSteps {
+  opacity: 0.9;
   margin-left: 1rem;
 }
 
 @media (max-width: 768px) {
-  .nav-container {
+  .nav-wrapper {
     padding: 1rem;
   }
 
-  .hero h1 {
+  .hero-wrapper h1 {
     font-size: 2.5rem;
   }
 
@@ -415,31 +427,20 @@ button:hover {
   .recipes-grid {
     grid-template-columns: 1fr;
   }
-  .bg-deco2 {
-    position: absolute;
-    inset: 0;
-    width: 250px;
+  .bg-decoration-element1 {
     left: 5%;
-    top: -40%;
+    top: -30%;
   }
-  .bg-deco3 {
-    position: absolute;
-    width: 200px;
+  .bg-decoration-element2 {
     right: 10%;
-    top: -20%;
   }
-  .bg-deco4 {
-    position: absolute;
-    width: 400px;
+  .bg-decoration-element3 {
     right: 0;
     bottom: -30%;
     transform: rotate(90deg);
   }
-  .bg-deco5 {
-    position: absolute;
-    width: 200px;
+  .bg-decoration-element4 {
     left: 10%;
-    bottom: -15%;
   }
 
   .search-panel {
@@ -448,12 +449,12 @@ button:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .container {
     padding: 0 1rem;
   }
 
-  .hero h1 {
+  .hero-wrapper h1 {
     font-size: 2rem;
   }
   .search-bar {
