@@ -1,52 +1,16 @@
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 90%;
-  position: relative;
-}
-
-#closeModal {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-#modalImg {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-#modalStepsTitle {
-  margin-top: 5px;
-}
-#modalSteps {
-  margin-left: 1rem;
-}
-
 :root {
-  --color-bg: #fef9e1;
+  /* Used Colors */
+  --color-background: #fef9e1;
   --color-accent: #e5d0ac;
   --color-primary: #a31d1d;
   --color-secondary: #6d2323;
+
+  /* Alpha Shades */
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-background-tint: rgba(0, 0, 0, 0.5);
+
+  /* Font Family */
+  --font-custome: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
@@ -54,23 +18,67 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+  font-family: var(--font-custome);
+  line-height: 1.6;
+}
 a {
   text-decoration: none;
 }
-body {
-  background-color: var(--color-bg);
+select {
+  background-color: var(--color-background);
+  border: 2px solid var(--color-background);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
   color: var(--color-secondary);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  min-width: 120px;
 }
 
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Navigation bar */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: var(--color-accent);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  box-shadow: 0 2px 10px var(--color-shadow);
+  z-index: 5;
 }
 
 .nav-container {
@@ -104,6 +112,7 @@ body {
   color: var(--color-primary);
 }
 
+/* Home Section */
 .home {
   height: 100vh;
   position: relative;
@@ -147,7 +156,13 @@ body {
   max-width: 500px;
   opacity: 0.8;
 }
+.cta-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+}
 
+/* Home: Hero Decoration */
 .decorative-images {
   position: absolute;
   top: 50%;
@@ -187,16 +202,11 @@ body {
   bottom: -15%;
 }
 
+/* Explore Section */
 .explore-recipes {
   min-height: 100vh;
   padding: 6rem 0 4rem;
-  background-color: var(--color-bg);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  background-color: var(--color-background);
 }
 
 .explore-recipes h2 {
@@ -236,10 +246,10 @@ body {
   flex: 1;
   max-width: 400px;
   padding: 12px 15px;
-  border: 2px solid var(--color-bg);
+  border: 2px solid var(--color-background);
   border-radius: 8px;
   font-size: 16px;
-  background-color: var(--color-bg);
+  background-color: var(--color-background);
 }
 
 .filters {
@@ -310,7 +320,7 @@ body {
 }
 
 .recipe-meta span {
-  background-color: var(--color-bg);
+  background-color: var(--color-background);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -326,53 +336,9 @@ body {
   color: var(--color-secondary);
 }
 
-button {
-  background-color: var(--color-primary);
-  color: var(--color-bg);
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  font-weight: 500;
-}
-
-button:hover {
-  background-color: var(--color-secondary);
-  transform: translateY(-2px);
-}
-
-.cta-button {
-  padding: 15px 30px;
-  font-size: 18px;
-  border-radius: 10px;
-}
-
-select {
-  background-color: var(--color-bg);
-  border: 2px solid var(--color-bg);
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  color: var(--color-secondary);
-  min-width: 120px;
-}
-
-select:focus {
-  outline: none;
-  border-color: var(--color-primary);
-}
-
-input:focus {
-  outline: none;
-  border-color: var(--color-primary);
-}
-
 .footer {
   background-color: var(--color-secondary);
-  color: var(--color-bg);
+  color: var(--color-background);
   text-align: center;
   padding: 2rem 0;
 }
@@ -386,6 +352,51 @@ input:focus {
 .footer-year {
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+/* Pop up model */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-background-tint);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#modalImg {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+#modalStepsTitle {
+  margin-top: 5px;
+}
+#modalSteps {
+  margin-left: 1rem;
 }
 
 @media (max-width: 768px) {

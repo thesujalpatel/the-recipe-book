@@ -3,119 +3,130 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>The Recipe Book</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#home">
-          <h1 class="nav-title" id="navTitle">The Recipe Book</h1>
-        </a>
-        <div class="nav-links">
-          <a href="#home" class="nav-link active">Home</a>
-          <a href="#explore" class="nav-link">Explore</a>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <a href="#home">
+            <h1 class="nav-title" id="navTitle">The Recipe Book</h1>
+          </a>
+          <div class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#explore" class="nav-link">Explore</a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <main>
       <section id="home" class="home">
-        <div class="hero">
-          <div class="decorative-images">
-            <img
-              src="assets/deco.svg"
-              alt="Recipe decoration"
-              class="bg-deco1"
-            />
-            <img
-              src="assets/deco1.png"
-              alt="Recipe decoration"
-              class="bg-deco2"
-            />
-            <img
-              src="assets/deco2.png"
-              alt="Recipe decoration"
-              class="bg-deco3"
-            />
-            <img
-              src="assets/deco3.png"
-              alt="Recipe decoration"
-              class="bg-deco4"
-            />
-            <img
-              src="assets/deco4.png"
-              alt="Recipe decoration"
-              class="bg-deco5"
-            />
-          </div>
-          <div class="hero-content">
-            <h1>The Recipe Book</h1>
-            <p class="tagline">Discover and Share Amazing Recipes</p>
-            <p class="description">
-              Find your next favorite dish or share your culinary creations with
-              the world.
-            </p>
-            <button class="cta-button" onclick="scrollToExplore()">
-              Get Started
-            </button>
+        <div class="container">
+          <div class="wrapper hero">
+            <div class="decorative-images">
+              <img
+                src="assets/images/HeroBackground.svg"
+                alt="Recipe decoration"
+                class="bg-deco1"
+              />
+              <img
+                src="assets/images/HeroDecoration1.png"
+                alt="Recipe decoration"
+                class="bg-deco2"
+              />
+              <img
+                src="assets/images/HeroDecoration2.png"
+                alt="Recipe decoration"
+                class="bg-deco3"
+              />
+              <img
+                src="assets/images/HeroDecoration3.png"
+                alt="Recipe decoration"
+                class="bg-deco4"
+              />
+              <img
+                src="assets/images/HeroDecoration4.png"
+                alt="Recipe decoration"
+                class="bg-deco5"
+              />
+            </div>
+            <div class="hero-content">
+              <h1>The Recipe Book</h1>
+              <p class="tagline">Discover and Share Amazing Recipes</p>
+              <p class="description">
+                Find your next favorite dish or share your culinary creations
+                with the world.
+              </p>
+              <button class="cta-button" onclick="scrollToExplore()">
+                Get Started
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="explore" class="explore-recipes">
         <div class="container">
-          <h2>Explore Recipes</h2>
-          <p class="section-description">
-            Browse through a variety of recipes from different cuisines and
-            dietary preferences.
-          </p>
+          <div class="wrapper">
+            <h2>Explore Recipes</h2>
+            <p class="section-description">
+              Browse through a variety of recipes from different cuisines and
+              dietary preferences.
+            </p>
 
-          <div class="search-panel">
-            <div class="search-bar">
-              <input
-                type="text"
-                id="searchInput"
-                placeholder="Search for recipes..."
-              />
-              <button onclick="searchRecipes()">Search</button>
-            </div>
-
-            <div class="filters">
-              <div class="filter-group">
-                <label for="diet">Diet:</label>
-                <select id="diet" onchange="filterRecipes()">
-                  <option value="all">All</option>
-                  <option value="vegetarian">Vegetarian</option>
-                  <option value="vegan">Vegan</option>
-                  <option value="gluten-free">Gluten-Free</option>
-                </select>
+            <div class="search-panel">
+              <div class="search-bar">
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Search for recipes..."
+                />
+                <button onclick="searchRecipes()">Search</button>
               </div>
 
-              <div class="filter-group">
-                <label for="prep-time">Time:</label>
-                <select id="prep-time" onchange="filterRecipes()">
-                  <option value="all">All</option>
-                  <option value="under-30">Under 30 min</option>
-                  <option value="30-60">30-60 min</option>
-                  <option value="over-60">Over 60 min</option>
-                </select>
+              <div class="filters">
+                <div class="filter-group">
+                  <label for="diet">Diet:</label>
+                  <select id="diet" onchange="filterRecipes()">
+                    <option value="all">All</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="gluten-free">Gluten-Free</option>
+                  </select>
+                </div>
+
+                <div class="filter-group">
+                  <label for="prep-time">Time:</label>
+                  <select id="prep-time" onchange="filterRecipes()">
+                    <option value="all">All</option>
+                    <option value="under-30">Under 30 min</option>
+                    <option value="30-60">30-60 min</option>
+                    <option value="over-60">Over 60 min</option>
+                  </select>
+                </div>
               </div>
             </div>
+
+            <div class="recipes-grid" id="recipesGrid"></div>
           </div>
-
-          <div class="recipes-grid" id="recipesGrid"></div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer-content">
-        <p>made with ♥ by Sujal Patel</p>
-        <p class="footer-year">© 2025 The Recipe Book</p>
+      <div class="container">
+        <div class="wrapper">
+          <div class="footer-content">
+            <p>made with ♥ by Sujal Patel</p>
+            <p class="footer-year">© 2025 The Recipe Book</p>
+          </div>
+        </div>
       </div>
     </footer>
 
+    <!-- Pop up card model for recipie -->
     <div id="recipeModal" class="modal">
       <div class="modal-content">
         <span id="closeModal">&times;</span>
@@ -127,6 +138,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

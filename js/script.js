@@ -385,7 +385,7 @@ function createRecipeCard(recipe) {
   card.innerHTML = `
     <div class="recipe-image-container">
       <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image" 
-           onerror="this.src='assets/defaultImg.png'; this.onerror=null;" />
+           onerror="this.src='assets/DefaultRecipeImg.png'; this.onerror=null;" />
     </div>
     <div class="recipe-content">
       <h3>${recipe.name}</h3>
